@@ -10,6 +10,10 @@ app = FastAPI()
 def testApp():
     return "Test app is running"
 
+@app.api_route('/testingcicd', methods=["GET"])
+def testAppcicd():
+    return "Testing CI CD"
+
 
 if __name__== "__main__":
     uvicorn.run(app, host="0.0.0.0", port=8000)
